@@ -17,7 +17,7 @@
   <body id="tw-body">
   	<header class="twg-header">
 	  	<nav class="navbar sticky-top navbar-light bg-light">
-		  <a class="navbar-brand" href="index.html">Tweeagle</a>
+		  <a class="navbar-brand" href="/TweeagleWeb/">Tweeagle</a>
 		  <i class="fas fa-ellipsis-h twg-btn-menu"></i>
 		</nav>
 	</header>
@@ -173,7 +173,7 @@
 	</footer>
 
 	
-	
+	<input type="hidden" id="mode" value="t">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -191,9 +191,11 @@
 			if(nextMode=='p'){
 				$('#dynamic-btn').html('<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="phraseSearch()">Search</button>');
 				$('#dynamic-mode').html('<a class="twg-btn-sub" href="#" onclick="switchMode(\'t\')">Switch to Text Search</a>');
+				$('#mode').val('p');
 			}else{
 				$('#dynamic-btn').html('<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="textSearch()">Search</button>');
 				$('#dynamic-mode').html('<a class="twg-btn-sub" href="#" onclick="switchMode(\'p\')">Switch to Phrase Search</a>');
+				$('#mode').val('t');
 			}
 		}
 
@@ -201,18 +203,34 @@
 			if(nextMode=='p'){
 				$('#dynamic-btn-after').html('<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="phraseSearchAfter()">Search</button>');
 				$('#dynamic-mode-after').html('<a class="twg-btn-sub" href="#" onclick="switchModeAfter(\'t\')">Switch to Text Search</a>');
+				$('#mode').val('pa');
 			}else{
 				$('#dynamic-btn-after').html('<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="textSearchAfter()">Search</button>');
 				$('#dynamic-mode-after').html('<a class="twg-btn-sub" href="#" onclick="switchModeAfter(\'p\')">Switch to Phrase Search</a>');
+				$('#mode').val('ta');
 			}
 		}
 
+		$(document).keypress(function(e) {
+			var mode = $('#mode').val();
 
+		    if(e.which == 13) {
+		    	if (mode == 'p'){
+		    		phraseSearch();
+		    	}else if(mode == 't'){
+		    		textSearch();
+		    	}else if(mode =='pa'){
+		    		phraseSearchAfter();
+		    	}else{
+		    		textSearchAfter();
+		    	}
+		    }
+		});
 
 
     	function textSearch(){
     		$("#tw-body").css("background-color", "#fafafa");
-
+    		$('#mode').val('ta');
     		$("#results").css("display", "block");
     		$("#main").css("display", "none");
     		$("#result-set").html('');
@@ -305,7 +323,7 @@
 
     	function phraseSearch(){
     		$("#tw-body").css("background-color", "#fafafa");
-
+    		$('#mode').val('ta');
     		$("#results").css("display", "block");
     		$("#main").css("display", "none");
     		$("#result-set").html('');
