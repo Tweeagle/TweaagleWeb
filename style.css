@@ -25,6 +25,10 @@ html, body, .container {
 	border-color: #1b95e0;
 }
 
+.btn.twg-btn-menu.twg-btn:hover {
+    color: #fff;
+}
+
 .twg-btn:active{
 	background-color: #1da1f2 !important;
 	border-color: #1da1f2 !important;
@@ -53,7 +57,7 @@ html, body, .container {
 }
 
 .twg-header .navbar{
-	background: transparent !important;
+	background: #fff !important;
 	font-weight: 300;
 }
 
@@ -151,4 +155,18 @@ html, body, .container {
 	background-color: #d1d1d1;
 	border-radius: 50%;
 	padding: 1px;
+}
+
+.tw-header-res{
+	display: none;
+}
+
+.tw-results-caption{
+	margin-top: 60px;
+	font-weight: 300;
+    font-size: 25px;
+}
+
+#dynamic-mode{
+	margin-top: 10px;
 }
