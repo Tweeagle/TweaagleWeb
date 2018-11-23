@@ -219,7 +219,6 @@
     	};
 
     	function textSearch(){
-    		//$("#results").html('')
     		$("#results").css("display", "block");
     		$("#main").css("display", "none");
     		$("#result-set").html('');
@@ -287,6 +286,64 @@
     	function phraseSearch(){
     		$("#results").css("display", "block");
     		$("#main").css("display", "none");
+    		$("#result-set").html('');
+
+			var query = $("#query").val();
+
+			$.ajax({
+				type: "POST",
+				url: "http://localhost:8080/TweeagleCore/rest/search/phrase",
+				//crossDomain: true,
+				data: {
+					q: query,
+					r: 0
+				},
+				success: function(res) {
+
+					$.each( res, function( key, tweet ) {				
+
+					   $("#result-set").append(
+					 	'<div class=\"row\"><div class=\"col-md-3\"></div><div class=\"col-md-6\"><p><img src='+tweet.userProfileImgURL+'><p>User: '+tweet.usertag+'</p><p>Tweet: '+tweet.text+'</p><p>Score: '+tweet.score+'</p></p></div><div class=\"col-md-3\"></div></div>'
+					 	);
+
+					});					 
+				},
+				error: function(res){
+					console.log(res);
+					console.log("res = " + res.responseText);
+				}
+			});
+    	}
+
+    	function phraseSearchAfter(){
+    		//$("#results").html('')
+    		$("#results").css("display", "block");
+    		$("#main").css("display", "none");
+    		$("#result-set").html('');
+
+			var query = $("#query-after").val();
+
+			$.ajax({
+				type: "POST",
+				url: "http://localhost:8080/TweeagleCore/rest/search/phrase",
+				//crossDomain: true,
+				data: {
+					q: query,
+					r: 0
+				},
+				success: function(res) {
+
+					$.each( res, function( key, tweet ) {
+					  $("#result-set").append(
+					 	'<div class=\"row\"><div class=\"col-md-3\"></div><div class=\"col-md-6\"><p><img src='+tweet.userProfileImgURL+'><p>User: '+tweet.usertag+'</p><p>Tweet: '+tweet.text+'</p><p>Score: '+tweet.score+'</p></p></div><div class=\"col-md-3\"></div></div>'
+					 	);
+					});					 
+				},
+				error: function(res){
+					console.log(res);
+					console.log("res = " + res.responseText);
+				}
+			});
     	}
 
     </script>
