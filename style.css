@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+html, body, .container {
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	color: #14171a;
+}
+
+.container {
+    display: table;
+    vertical-align: middle;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.twg-btn{
+	border-radius: 30px;
+}
+
+.twg-btn:hover{
+	background-color: #1b95e0;
+	border-color: #1b95e0;
+}
+
+.twg-btn:active{
+	background-color: #1da1f2 !important;
+	border-color: #1da1f2 !important;
+}
+
+.twg-input-field{
+	border-radius: 30px;
+}
+
+.twg-header{
+	position: absolute;
+	width: 100%;
+	background-color: #fff;
+}
+
+.twg-footer{
+	width: 100%;
+	background-color: #fff;
+}
+
+.twg-footer a{
+	font-size: 12px;
+	color: #14171a;
+	font-weight: 200;
+	margin: 0px 10px;
+}
+
+.twg-header .navbar{
+	background: transparent !important;
+	font-weight: 300;
+}
+
+.twg-footer .navbar{
+	background: transparent !important;
+	font-weight: 200;
+}
+
+.twg-btn-menu{
+	cursor: pointer;
+}
+
+.twg-btn-sub{
+	color: #1b95e0;
+}
+
+.twg-btn-sub:hover{
+	text-decoration: none;
+	color: #1da1f2;
+}
+
+.tweet{
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 25px;
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(51, 51, 51, 0.35);
+	-moz-box-shadow: 0px 0px 13px 0px rgba(51, 51, 51, 0.35);
+	box-shadow: 0px 0px 13px 0px rgba(51, 51, 51, 0.35);
+}
+
+.tw-metrics{
+	font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    color: #adadad;
+}
+
+.tw-profile{
+	border-radius: 50%;	
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.tw-item {
+    margin: 45px 0px;
+}
+
+.tw-follow-holder{
+	margin: auto;
+}
+
+.tw-follow-holder .btn{
+	font-size: 14px;
+}
+
+.tw-username{
+	/*margin-bottom: 5px;*/
+}
+
+.tw-info{
+	list-style: none;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0;
+}
+
+.tw-content{
+	height: 90%;
+}
+
+.tw-micon{
+	padding-right: 15px;
+    color: #adadad;
+}
+
+.tw-micon-score{
+	padding-right: 15px;
+    color: #adadad;
+	color: #1DA1F2;
+}
+
+.tw-score{
+	color: #1DA1F2;
+}
+
+.tw-micon-verified{
+	background-color: #1DA1F2;
+	color: #fff;
+	border-radius: 50%;
+	padding: 1px;
+}
+
+.tw-micon-unverified{
+	color: #fff;
+	background-color: #d1d1d1;
+	border-radius: 50%;
+	padding: 1px;
+}
