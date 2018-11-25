@@ -314,8 +314,13 @@
 					},
 					success: function(res) {
 
+						if(res==null){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}
+
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {
+
 							if(tweet.isVerified == false){
 								$("#result-set").append(
 							 		'<div class=\"row tw-item\"><div class=\"col-md-2\"></div><div class=\"col-md-8\"><div class=\"row\"><div class=\"col-md-4\"><div class=\"row col-md-12 tw-username\">@'+tweet.usertag+'</div><div class=\"row\"><div class=\"col-md-3\"><img class=\"tw-profile\" src='+tweet.userProfileImgURL+'></div><div class=\"col-md-9 tw-follow-holder\"><a href=\"https://twitter.com/'+tweet.usertag+'\"><button class="btn twg-btn-menu twg-btn" value="Follow" type="button">Follow</button></a></div></div><div class=\"row col-md-12\"><ul class=\"tw-info\"><li>Verified: <i class=\"fas fa-check tw-micon-unverified\"></i></li><li>Followers: '+tweet.userFollowersCnt+'</li></ul></div></div><div class=\"col-md-8 tweet\"><div class=\"row col-md-12 tw-content\">'+tweet.text+'</div><div class=\"row tw-metrics\"><div class=\"col-2\"><i class=\"fas fa-retweet tw-micon\"></i>'+tweet.retweetCnt+'</div><div class=\"col-2\"><i class=\"far fa-heart tw-micon\"></i>'+tweet.favoriteCnt+'</div><div class=\"col-2\"><i class=\"fas fa-reply tw-micon\"></i>'+tweet.replyCnt+'</div><div class=\"col-2\"><i class=\"fas fa-quote-right tw-micon\"></i>'+tweet.quoteCnt+'</div><div class=\"col-4 tw-score\"><i class=\"fas fa-fire tw-micon-score\"></i>'+tweet.score.toFixed(3)+'</div></div></div></div></div><div class=\"col-md-2\"></div></div>'
@@ -366,6 +371,10 @@
 						r: $("input[name='rank-opt-after']:checked").val()
 					},
 					success: function(res) {
+
+						if(res==null){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}
 
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {
@@ -421,8 +430,12 @@
 					},
 					success: function(res) {
 
+						if(res==null){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}
+
 						var res_count = 20;
-						$.each( res, function( key, tweet ) {				
+						$.each( res, function( key, tweet ) {			
 
 						   if(tweet.isVerified == false){
 								$("#result-set").append(
@@ -472,6 +485,10 @@
 						r: $("input[name='rank-opt-after']:checked").val()
 					},
 					success: function(res) {
+
+						if(res==null){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}
 
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {
