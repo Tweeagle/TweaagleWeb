@@ -335,8 +335,11 @@
 						   if (res_count == 0){
 						   		return false; 
 						   }
+						});	
 
-						});					 
+						if(res_count == 20){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}				 
 					},
 					error: function(res){
 						console.log(res);
@@ -393,7 +396,11 @@
 						   if (res_count == 0){
 						   		return false; 
 						   }
-						});					 
+						});	
+
+						if(res_count == 20){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}				 
 					},
 					error: function(res){
 						console.log(res);
@@ -451,7 +458,11 @@
 						   if (res_count == 0){
 						   		return false; 
 						   }
-						});					 
+						});	
+
+						if(res_count == 20){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}				 
 					},
 					error: function(res){
 						console.log(res);
@@ -507,7 +518,11 @@
 						   if (res_count == 0){
 						   		return false; 
 						   }
-						});					 
+						});	
+
+						if(res_count == 20){
+							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
+						}				 
 					},
 					error: function(res){
 						console.log(res);
