@@ -18,20 +18,6 @@
   	<header class="twg-header">
 	  	<nav class="navbar sticky-top navbar-light bg-light">
 		  <a class="navbar-brand" href="/TweeagleWeb/">Tweeagle</a>
-		  <div class="col tw-header-res"></div>
-	    	<div class="col-lg-1 col-1 tw-header-res" style="margin: auto; height: 50px; text-align: center;">
-	    		<img src="imgs/tweeagle_logo.png" class="rounded mx-auto" alt="Tweeagle Logo" style="width: 50px;">
-	    	</div>
-	    	<div class="col-lg-5 col-10 tw-header-res">
-	      		<div class="input-group mb-3" style="margin-bottom: 0px !important;">
-					<input id="query-after" type="text" class="form-control twg-input-field" placeholder="Search Tweets" aria-label="Search Query" aria-describedby="button-addon2">
-				  	<div id="dynamic-btn-after" class="input-group-append">
-				    	<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="textSearchAfter()">Search</button>
-					</div>
-				</div>
-	    	</div>
-	    	<div class="col tw-header-res"></div>
-
 		  <i class="fas fa-ellipsis-h twg-btn-menu" onclick="window.location.href = 'about.html';"></i>
 		</nav>
 	</header>
@@ -56,169 +42,24 @@
 		    	<div class="col">
 		      		
 		    	</div>
-		    	<div class="col-lg-5 col-10">
-		      		<div class="input-group mb-3">
-						<input id="query" type="text" class="form-control twg-input-field" placeholder="Search Tweets" aria-label="Search Query" aria-describedby="button-addon2">
-					  	<div id="dynamic-btn" class="input-group-append">
-					  			<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="textSearch()">Search</button>					  						    	
-						</div>
-					</div>
+		    	<div class="col-lg-10 col-10 text-justify">
+		    		<h5><strong>Introduction</strong></h5>
+		      		<p>Nowadays, the majority of the population gets their news from social media. In a recent survey conducted by Pew Research Center in 2018, led to the conclusion that around 68% of people with internet access consume news from social media networks. The vast amount of data generated and the diversity of information posted by the users has caused several issues revolving around Fake news and untrusted sources.<br><br>
+Having this in mind, we developed Tweeagle, a search engine for retrieving relevant and credible tweets from Twitter. Through our engine anyone can search tweets using either text or phrase queries, and rank the results by selecting one of the available ranking options. These include the Vector Space Model (VSM) ranking, the Twitter Weighing (TWiW) ranking and a combina- tion of the two.</p>
+					<br>
+					<h5><strong>Purpose</strong></h5>
+		      		<p>The user can use our search engine for reading news and content from more reliable sources. Additionally through our platform people can find and follow other Twitter users with whom share common interests. In this way, the network of the user can be enhanced with people who are credible and worth interacting with. Finally, it’s worth mentioning that Twitter focuses mostly on the recent activity of users, rather than using more sophisticated algorithms for ranking the results based on credibility, something that our engine incorporates.</p>
+		      			
 		    	</div>
 		    	<div class="col">
 		      		
 		    	</div>
 		  	</div>
 
-		  	<div class="row">
-		  		<div class="col"></div>
-		  		<div class="col-5 text-center">
-		  			<span style="margin-right: 5px; display: inline-block;">Ranking: </span>
-		  			<div class="form-check-inline">
-					  <input type="radio" class="form-check-input" name="rank-opt" value=1>Similarity
-					</div>
-					<div class="form-check-inline">					  
-					    <input type="radio" class="form-check-input" name="rank-opt" value=2>Twitter Weighting
-					</div>
-					<div class="form-check-inline">
-					  <input checked="checked" type="radio" class="form-check-input" name="rank-opt" value=0>Both
-					</div>
-		  		</div>
-		  		<div class="col"></div>		  		
-		  	</div>
 
-		  	<div class="row">
-		    	<div class="col"></div>
-		    	<div id="dynamic-mode" class="col-5" class="text-center" align="center">
-			    	<a class="twg-btn-sub" href="#" onclick="switchMode('p')">Switch to Phrase Search</a>
-		    	</div>
-		    	<div class="col"></div>
-		  	</div>
 
 		</div>
 	</div>
-
-	<!-- Page after first search -->
-	<div id="results" class="container-fluid">
-		<div class="row" align="center">	
-
-			<!-- Filters -->
-			<div class="row col-md-12 tw-header-res" style="margin-top: 100px;">
-		  		<div class="col"></div>
-		  		<div class="col-5">
-		  			<span style="margin-right: 5px;">Ranking: </span>
-		  			<div class="form-check-inline">
-					  <input type="radio" class="form-check-input" name="rank-opt-after" value=1>Similarity
-					</div>
-					<div class="form-check-inline">					  
-					    <input type="radio" class="form-check-input" name="rank-opt-after" value=2>Twitter Weighting
-					</div>
-					<div class="form-check-inline">
-					  <input checked="checked" type="radio" class="form-check-input" name="rank-opt-after" value=0>Both
-					</div>
-		  		</div>
-		  		<div class="col"></div>		  		
-		  	</div>
-
-		  	<div class="row col-md-12 tw-header-res">
-		    	<div class="col"></div>
-		    	<div id="dynamic-mode-after" class="col-5" class="text-center" align="center">
-			    	<a class="twg-btn-sub" href="#" onclick="switchModeAfter('p')">Switch to Phrase Search</a>
-		    	</div>
-		    	<div class="col"></div>
-		  	</div>
-		  	<!-- *** -->
-
-	    	<div class="col-md-12">
-	      		<div class="text-center tw-results-caption">
-	      			<p>Most Relevant Results</p>
-				  <!-- <img src="imgs/tweeagle_logo.png" class="rounded mx-auto" alt="Tweeagle Logo" style="width: 50px; margin-top: 90px;"> -->
-				</div>
-	    	</div>  	
-	  	</div>
-
-	  	<!-- <div class="row"> -->
-	    	<!-- <div class="col"></div>
-	    	<div class="col-lg-1 col-1"><img src="imgs/tweeagle_logo.png" class="rounded mx-auto" alt="Tweeagle Logo" style="width: 50px; margin-bottom: 35px;"></div>
-	    	<div class="col-lg-5 col-10">
-	      		<div class="input-group mb-3">
-					<input id="query-after" type="text" class="form-control twg-input-field" placeholder="Search Tweets" aria-label="Search Query" aria-describedby="button-addon2">
-				  	<div id="dynamic-btn-after" class="input-group-append">
-				    	<button class="btn btn-outline-secondary twg-btn" type="button" id="button-addon2" onclick="textSearchAfter()">Search</button>
-					</div>
-				</div>
-	    	</div>
-	    	<div class="col"></div> -->
-	  	<!-- </div> -->
-
-	  	<!-- <div class="row">
-	  		<div class="col"></div>
-	  		<div class="col-5">
-	  			<span>Ranking: </span>
-	  			<div class="form-check-inline">
-				  <input type="radio" class="form-check-input" name="rank-opt-after" value=1>Similarity
-				</div>
-				<div class="form-check-inline">					  
-				    <input type="radio" class="form-check-input" name="rank-opt-after" value=2>Twitter Weighting
-				</div>
-				<div class="form-check-inline">
-				  <input checked="checked" type="radio" class="form-check-input" name="rank-opt-after" value=0>Both
-				</div>
-	  		</div>
-	  		<div class="col"></div>		  		
-	  	</div>
-
-	  	<div class="row">
-	    	<div class="col"></div>
-	    	<div id="dynamic-mode-after" class="col-5" class="text-center" align="center">
-		    	<a class="twg-btn-sub" href="#" onclick="switchModeAfter('p')">Switch to Phrase Search</a>
-	    	</div>
-	    	<div class="col"></div>
-	  	</div> -->
-
-	  	<div id="result-set">	  		
-	  		
-	  		<!-- TEST RESULT -->
-	  		<div class="row tw-item">
-	  			<div class="col-md-2"></div>
-	  			<div class="col-md-8">
-	  				<div class="row">
-	  					<!-- User Info -->
-	  					<div class="col-md-4">
-	  						<div class="row col-md-12 tw-username">@GigglingElf</div>
-	  						<div class="row">
-	  							<div class="col-md-3">
-	  								<img class="tw-profile" src="http://pbs.twimg.com/profile_images/1056005910139752449/wu0rYIxJ_normal.jpg">
-	  							</div>
-	  							<div class="col-md-9 tw-follow-holder"><a href="https://twitter.com/GigglingElf" class="btn twg-btn twg-btn-menu">Follow</a></div>
-	  						</div>
-	  						
-	  						<div class="row col-md-12">
-	  							<ul class="tw-info">
-	  								<li>Verified: <i class="fas fa-check tw-micon-unverified"></i></li>
-	  								<li>Followers: 1000</li>
-	  							</ul>
-	  						</div>
-	  					</div>
-
-	  					<!-- Tweet -->
-	  					<div class="col-md-8 tweet">
-	  						<div class="row col-md-12 tw-content">This is a great day with a great tweet</div>
-	  						<div class="row tw-metrics">
-	  							<div class="col-2"><i class="fas fa-retweet tw-micon"></i>5</div>
-	  							<div class="col-2"><i class="far fa-heart tw-micon"></i>4</div>
-	  							<div class="col-2"><i class="fas fa-reply tw-micon"></i>3</div>
-	  							<div class="col-2"><i class="fas fa-quote-right tw-micon"></i>8</div>
-	  							<div class="col-4 tw-score"><i class="fas fa-fire tw-micon-score"></i>0.589</div>
-	  						</div>
-	  					</div>
-	  				</div>	  				
-	  			</div>
-	  			<div class="col-md-2"></div>
-	  		</div>
-
-	  	</div>
-	</div>
-
 
 	<!-- Footer -->
 	<footer class="twg-footer">
@@ -235,9 +76,6 @@
 	
 	<input type="hidden" id="mode" value="t">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
