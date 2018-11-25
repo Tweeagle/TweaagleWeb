@@ -314,10 +314,6 @@
 					},
 					success: function(res) {
 
-						if(res==null){
-							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
-						}
-
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {
 
@@ -337,7 +333,7 @@
 						   }
 						});	
 
-						if(res_count == 20){
+						if(res_count == 20 || res==null){
 							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
 						}				 
 					},
@@ -375,10 +371,6 @@
 					},
 					success: function(res) {
 
-						if(res==null){
-							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
-						}
-
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {
 						  
@@ -398,7 +390,7 @@
 						   }
 						});	
 
-						if(res_count == 20){
+						if(res_count == 20 || res==null){
 							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
 						}				 
 					},
@@ -437,10 +429,6 @@
 					},
 					success: function(res) {
 
-						if(res==null){
-							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
-						}
-
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {			
 
@@ -460,7 +448,7 @@
 						   }
 						});	
 
-						if(res_count == 20){
+						if(res_count == 20 || res==null){
 							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
 						}				 
 					},
@@ -497,10 +485,6 @@
 					},
 					success: function(res) {
 
-						if(res==null){
-							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
-						}
-
 						var res_count = 20;
 						$.each( res, function( key, tweet ) {
 						  
@@ -520,7 +504,7 @@
 						   }
 						});	
 
-						if(res_count == 20){
+						if(res_count == 20 || res==null){
 							$("#result-set").append('<br><br><h6 style="text-align: center;">No results found</h6>');
 						}				 
 					},
